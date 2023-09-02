@@ -1,0 +1,245 @@
+.player-pick {
+  width: fit-content;
+  margin: 70px auto 20px;
+  text-align: center;
+  border: 5px solid green;
+  border-radius: 18px;
+  padding: 20px;
+  background: white;
+}
+
+.top-players-by-position {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px 20px;
+  
+}
+
+.position-count {
+  position: fixed;
+  top: 30px;
+  right: 50px;
+  padding: 8px;
+  border: 3px solid black;
+  background: white;
+}
+
+.player-item {
+  display: block !important;
+}
+
+.draft-counter {
+  position: fixed;
+  top: 30px;
+  left: 50px;
+  width: 108px;
+  border: 3px solid;
+  background: white;
+  font-size: 18px;
+  padding: 5px;
+}
+
+.restart-draft-button {
+  position: fixed;
+  top: 28px;
+  left: 21%;
+  height: 40px;
+  border-radius: 11px;
+  width: 99px;
+  background: indianred;
+  color: white;
+}
+
+.draft-counter-title {
+  background: lightblue;
+}
+
+.round-count {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+.pick-count {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+.count-title {
+  margin-right: 17px;
+}
+
+.top-remaining {
+  width: 275px;
+  margin: 20px auto;
+  background: #e2f2ff;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.search-bar-container {
+  width: fit-content;
+  margin: 5px auto;
+}
+
+.count {
+  margin-right: 8px;
+}
+
+.search-bar {
+  height: 50px;
+  width: 300px;
+  font-size: 24px;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+  grid-gap: 20px;
+}
+
+.btn {
+  font-size: 24px;
+  padding: 5px 15px;
+  border-radius: 10px;
+}
+
+.remove-button.btn {
+  color: white;
+  background: #d42222;
+}
+
+.pick-button.btn {
+  color: white;
+  background: rgb(0, 127, 0);
+}
+
+.player-results {
+  width: fit-content;
+  margin: 5px auto;
+  font-size: 20px;
+}
+
+.players-left {
+  width: fit-content;
+  position: fixed;
+  top: 146px;
+  left: 200px;
+  background: white;
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+
+}
+
+.team-dropdown {
+  height: 40px;
+  width: 240px;
+  font-size: 18px;
+  border-radius: 10px;
+  padding: 8px;
+
+}
+
+.team-name {
+  margin: -22px 9px;
+  background: white;
+  z-index: 20;
+  position: relative;
+  width: 90%;
+}
+
+.team-list-names {
+  position: relative;
+  top: 30px;
+  left: 10px;
+}
+
+.team-list-container {
+  height: 145px;
+  overflow: scroll;
+}
+
+.teams-container {
+  position: fixed;
+  top: 485px;
+  left: 100px;
+  width: 400px;
+  border: 2px solid;
+  height: 166px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+
+}
+
+.team-selector {
+  position: relative;
+  top: -37px;
+  left: 0px;
+  width: 248px;
+  height: 30px;
+  font-size: 18px;
+}
+
+.player-details{
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  grid-gap: 5px;
+}
+
+.selected-player {
+  width: fit-content;
+  margin: 60px auto 20px;
+  font-size: 30px;
+}
+
+.my-team {
+  position: fixed;
+  width: fit-content;
+  top: 100px;
+  right: 100px;
+  min-width: 350px;
+  background: white;
+  min-height: 400px;
+  text-align: center;
+  border-radius: 21px;
+  z-index: 20;
+  border: 2px solid;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+.my-team-title{
+  text-align: center;
+  border-bottom: 1px solid;
+}
+
+.search-result {
+  margin: 10px auto;
+  border: 2px solid blue;
+  text-align: center;
+  padding: 8px;
+  border-radius: 10px;
+  background: lightblue;
+}
+
+.top-section {
+  background: white;
+  border: 2px solid;
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+
+}
+
+.top-title {
+  text-align: center;
+}
