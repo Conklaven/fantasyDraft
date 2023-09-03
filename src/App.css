@@ -245,3 +245,33 @@
 .top-title {
   text-align: center;
 }
+
+
+@media (max-width: 767px) {
+  .draft-counter{
+    left: 2%;
+  }
+  .restart-draft-button{
+    left: 34%
+  }
+
+  .my-team{
+    position: initial;
+  }
+
+  .players-left{
+    position: initial;
+  }
+
+  .player-pick{
+    margin-top: 165px;
+  } 
+
+  .teams-container{
+    position: initial;
+  }
+
+  .options{
+    flex-wrap: wrap;
+  }
+}
