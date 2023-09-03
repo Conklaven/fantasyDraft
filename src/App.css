@@ -16,12 +16,13 @@
 }
 
 .position-count {
-  position: fixed;
+  position: absolute;
   top: 30px;
   right: 50px;
   padding: 8px;
   border: 3px solid black;
   background: white;
+  width: 32%;
 }
 
 .player-item {
@@ -29,7 +30,7 @@
 }
 
 .draft-counter {
-  position: fixed;
+  position: absolute;
   top: 30px;
   left: 50px;
   width: 108px;
@@ -40,7 +41,7 @@
 }
 
 .restart-draft-button {
-  position: fixed;
+  position: absolute;
   top: 28px;
   left: 21%;
   height: 40px;
@@ -128,9 +129,9 @@
 
 .players-left {
   width: fit-content;
-  position: fixed;
+  position: absolute;
   top: 146px;
-  left: 200px;
+  left: 5%;
   background: white;
   border: 2px solid black;
   border-radius: 8px;
@@ -168,9 +169,9 @@
 }
 
 .teams-container {
-  position: fixed;
+  position: absolute;
   top: 485px;
-  left: 100px;
+  left: 5%;
   width: 400px;
   border: 2px solid;
   height: 166px;
@@ -203,7 +204,7 @@
 }
 
 .my-team {
-  position: fixed;
+  position: absolute;
   width: fit-content;
   top: 100px;
   right: 100px;
