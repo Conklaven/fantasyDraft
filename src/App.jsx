@@ -97,11 +97,21 @@ function App() {
   };
   // set the dradt counter to the next pick in the draft where each round has 12 picks and the next pick after 12 the round goes up one
   function nextPick() {
+    //if pick is divisible by 12 then round goes up by 1 and pick goes back to 1
     if (draftCounter.Pick === 12) {
       setDraftCounter(prevDraftCounter => { return{ ...prevDraftCounter, Round: draftCounter.Round + 1, Pick: 1} })
     } else {
       setDraftCounter(prevDraftCounter => { return{ ...prevDraftCounter, Pick: draftCounter.Pick + 1} })
     }
+  }
+
+  function manuallyChangePick(event) {
+    const { name, value } = event.target;
+    const numberValue = parseInt(value, 10);
+    if (isNaN(numberValue)) {
+      return;
+    }
+    setDraftCounter(prevDraftCounter => ({ ...prevDraftCounter, [name]: numberValue }));
   }
 
 
@@ -295,7 +305,7 @@ function App() {
       }
     }}>Restart Draft</button>
     <div className="App">
-    <PlayerPick className="top-overall" name={player ? player.name : ''} position={player ? player.position : ''} rank={player ? player.rank : ''} ranking="Top Players Left"/>
+    <PlayerPick className="top-overall" name={player ? player.name : ''} position={player ? player.position : ''} rank={player ? player.Rank : ''} ranking="Top Players Left"/>
       <div className='position-count'> 
           <span className='count-title'>Position Count</span>
           <span className='qb-count count'>QB: {positionCounts.QB}/1 </span>
@@ -313,10 +323,10 @@ function App() {
         </div>
         <div className='draft-counter-count'>
           <div className='round-count'>
-          <span className='round-title'>Round: </span> {draftCounter.Round}
+          <span className='round-title'>Round: </span> <input name="Round" className='counter-input' value={draftCounter.Round} onChange={manuallyChangePick} />
           </div>
           <div className='pick-count'>
-            <span className='pick-title'>Pick: </span> {draftCounter.Pick}
+            <span className='pick-title'>Pick: </span> <input name="Pick" className='counter-input' value={draftCounter.Pick} onChange={manuallyChangePick} />
           </div>
         </div>
       </div>

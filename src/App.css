@@ -1,11 +1,13 @@
 .player-pick {
-  width: fit-content;
-  margin: 70px auto 20px;
+  width: 407px;
+  margin: 112px auto 20px;
   text-align: center;
   border: 5px solid green;
   border-radius: 18px;
   padding: 20px;
   background: white;
+  display: flex;
+  justify-content: space-around;
 }
 
 .top-players-by-position {
@@ -173,7 +175,7 @@
   position: absolute;
   top: 485px;
   left: 5%;
-  width: 340px;
+  width: 280px;
   border: 2px solid;
   height: 166px;
   background: white;
@@ -198,6 +200,10 @@
   grid-gap: 5px;
 }
 
+.counter-input {
+  width: 20px;
+}
+
 .selected-player {
   width: fit-content;
   margin: 60px auto 20px;
@@ -209,7 +215,7 @@
   width: fit-content;
   top: 100px;
   right: 5%;
-  min-width: 350px;
+  min-width: 280px;
   background: white;
   min-height: 400px;
   text-align: center;
@@ -257,21 +263,36 @@
 
   .my-team{
     position: initial;
+    width: 80vw;
+    margin: 10px auto;
   }
 
   .players-left{
     position: initial;
+    margin: 10px auto;
+    width: 80vw;
   }
 
   .player-pick{
     margin-top: 165px;
+    width: 80vw;
   } 
+
+  .team-selector{
+    left: 33px;
+  }
 
   .teams-container{
     position: initial;
+    width: 80vw;
+    margin: 10px auto;
   }
 
   .options{
     flex-wrap: wrap;
+  }
+
+  .selected-player{
+    text-align: center;
   }
 }
