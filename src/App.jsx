@@ -60,7 +60,7 @@ function App() {
       setDraftCounter(savedState.draftCounter);
     } else {
       const getPlayers = async () => {
-        const res = await axios.get('http://localhost:3001/players');
+        const res = await axios.get('https://busy-teal-scorpion-slip.cyclic.app/Players');
         const playersData = JSON.parse(JSON.stringify(res.data));
         setPlayers(playersData);
         setAllPlayers(playersData);
