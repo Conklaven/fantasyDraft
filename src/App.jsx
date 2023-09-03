@@ -397,6 +397,8 @@ function App() {
       <TopTen className='top-wrs top-section' playersRemaining={topPlayersByPosition.WR} ranking="Top Wide Recievers Left" count={draftCounter.Pick}/>
       <TopTen className='top-tes top-section' playersRemaining={topPlayersByPosition.TE} ranking="Top Tight Ends Left" count={draftCounter.Pick}/>
       <TopTen className='top-dfs top-section' playersRemaining={topPlayersByPosition['D/ST']} ranking="Top Defense Left" count={draftCounter.Pick}/>
+      <TopTen className='top-dfs top-section' playersRemaining={topPlayersByPosition.K} ranking="Top Kickers Left" count={draftCounter.Pick}/>
+    
     </div>
 
     <div className='teams-container'>
