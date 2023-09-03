@@ -31,6 +31,7 @@ function App() {
     WR: [],
     TE: [],
     'D/ST': [],
+    K: [],
   });
   // set a state of myPlayer count to the count of each position in the myTeam array
   const [positionCounts, setPositionCounts] = useState( savedState ? savedState.positionCounts :  {
@@ -60,14 +61,14 @@ function App() {
       setDraftCounter(savedState.draftCounter);
     } else {
       const getPlayers = async () => {
-        const res = await axios.get('https://busy-teal-scorpion-slip.cyclic.app/Players');
-        const playersData = JSON.parse(JSON.stringify(res.data));
-        console.log("playersData", playersData);
-        setPlayers(playersData);
-        setAllPlayers(playersData);
-        myWants();
-        setPlayer(res.data[0]);
-        setMyPlayers(res.data.filter(player => player.want === true));
+          const res = await axios.get('https://busy-teal-scorpion-slip.cyclic.app/Players');
+          const playersData = JSON.parse(JSON.stringify(res.data));
+          console.log("playersData", playersData);
+          setPlayers(playersData);
+          setAllPlayers(playersData);
+          myWants();
+          setPlayer(res.data[0]);
+          setMyPlayers(res.data.filter(player => player.want === true));
       };
       getPlayers();
     }
@@ -397,6 +398,7 @@ function App() {
       <TopTen className='top-wrs top-section' playersRemaining={topPlayersByPosition.WR} ranking="Top Wide Recievers Left" count={draftCounter.Pick}/>
       <TopTen className='top-tes top-section' playersRemaining={topPlayersByPosition.TE} ranking="Top Tight Ends Left" count={draftCounter.Pick}/>
       <TopTen className='top-dfs top-section' playersRemaining={topPlayersByPosition['D/ST']} ranking="Top Defense Left" count={draftCounter.Pick}/>
+      <TopTen className='top-dfs top-section' playersRemaining={topPlayersByPosition.K} ranking="Top Kickers Left" count={draftCounter.Pick}/>
     
     </div>
 
