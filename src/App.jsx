@@ -60,8 +60,9 @@ function App() {
       setDraftCounter(savedState.draftCounter);
     } else {
       const getPlayers = async () => {
-        const res = await axios.get('http://localhost:3001/players');
+        const res = await axios.get('https://busy-teal-scorpion-slip.cyclic.app/Players');
         const playersData = JSON.parse(JSON.stringify(res.data));
+        console.log("playersData", playersData);
         setPlayers(playersData);
         setAllPlayers(playersData);
         myWants();
@@ -356,10 +357,7 @@ function App() {
             <div className='team-select'>
                 <select className='team-dropdown' onChange={handleTeamSelection}>
                   {teams.map((_, index) => {
-                      console.log("teamName", teamName);
-                      console.log("index", index);
                       const selectedTeamName = teamName.find(team => team.id === index);
-                      console.log("selectedTeamName", selectedTeamName);
                       return (
                         <option key={index} value={index}>
                           {selectedTeamName? selectedTeamName.name : `Team ${index + 1}`}
@@ -404,10 +402,7 @@ function App() {
     <div className='teams-container'>
     <select className='team-selector' onChange={handleSelectTeam}>
         {teams.map((_, index) => {
-          console.log("teamName", teamName);
-          console.log("index", index);
           const selectedTeamName = teamName.find(team => team.id === index);
-          console.log("selectedTeamName", selectedTeamName);
           return (
             <option key={index} value={index}>
               {selectedTeamName? selectedTeamName.name : `Team ${index + 1}`}
